@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/general.css" />
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/9712b547d9.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <!--NAVIGATION BAR-->
+      <!--NAVIGATION BAR-->
+      <nav class="navigation-bar">
+        <ul class="navigation-top-list">
+          <li><a class="nav-link" href="index.html">HOME</a></li>
+          <li><a class="nav-link" href="about-me.html">ABOUT ME</a></li>
+          <li><a class="nav-link" href="gallery.html">GALLERY</a></li>
+          <li><a class="nav-link" href="photography.html">PHOTOGRAPHY</a></li>
+
+          <li><a class="nav-link" href="contact.html">CONTANCT</a></li>
+        </ul>
+
+        <button class="mobile-nav-button">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+
+      <!--SLIDING NAVIGATION-->
+      <!--SLIDING NAVIGATION-->
+
+      <nav class="sliding-navigation">
+        <button class="mobile-nav-close-button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <ul class="navigation-list">
+          <li class="navigation-list-link">
+            <a href="index.html">HOME</a>
+          </li>
+          <li class="navigation-list-link">
+            <a href="about-me.html">ABOUT ME</a>
+          </li>
+          <li class="navigation-list-link">
+            <a href="gallery.html">GALLERY</a>
+          </li>
+          <li class="navigation-list-link">
+            <a href="photography.html">PHOTOGRAPHY</a>
+          </li>
+          <li class="navigation-list-link">
+            <a href="contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="section-form">
+      <div class="contact-container">
+        <h1 class="contact-heading">CONTACT ME HERE</h1>
+
+        <p class="contact-sub-text">
+          Please feel free to contact me if you have any inquiries about my art
+        </p>
+        <div class="form-video">
+          <video
+            class="form-video__content"
+            src="images/87601_Ripples in the water_By_Omri_Ohana_Artlist_HD.mp4"
+            autoplay
+            loop
+            muted
+          ></video>
+        </div>
+
+        <div class="form-container">
+          <form action="#" class="form">
+            <div class="form__group">
+              <input
+                type="text"
+                class="form__group__name input"
+                placeholder="NAME"
+                required
+              />
+              <input
+                type="email"
+                class="form__group__email input"
+                placeholder="E-MAIL"
+                required
+              />
+
+              <div class="form__group__message">
+                <label for="message "></label>
+                <textarea
+                  class="message__box input"
+                  name="message"
+                  cols="30"
+                  rows="10 git"
+                  placeholder="write your message here...."
+                ></textarea>
+              </div>
+
+              <div class="form__group__btn">
+                <button class="form-btn" type="submit">Send</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="script.js" defer></script>
+  </body>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-contact">
+        <h4 class="footer-contact-heading">CONTACT</h4>
+        <a
+          class="footer-contact_email"
+          href="mailto:scott.bradley93@hotmail.com"
+          >scott.bradley@hotmail.com
+        </a>
+
+        <a class="footer-contact_phone" href="tel:01786263663">01786263663</a>
+      </div>
+    </div>
+  </footer>
+</html>

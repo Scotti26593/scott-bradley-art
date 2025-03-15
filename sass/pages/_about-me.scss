@@ -1,0 +1,124 @@
+// ABOUT ME
+
+@use "../base/_variables.scss" as *;
+@use "../components/_carousel.scss" as *;
+@use "../layouts/layouts" as *;
+@use "../base/_mixins.scss" as *;
+
+.about-me-section {
+  background-color: $color-primary;
+  max-width: 100%;
+  overflow: hidden;
+}
+.about-me-heading {
+  margin-top: 15rem;
+  padding-top: 7rem;
+  margin-bottom: 0rem;
+  font-size: 4rem;
+  animation-name: moveInLeft;
+  animation-duration: 5s;
+  font-family: $font-primary;
+  letter-spacing: 5px;
+
+  @include respond(550px) {
+    font-size: 100%;
+    justify-self: center;
+  }
+
+  @include respond(400px) {
+    font-size: 85%;
+    justify-self: center;
+  }
+}
+
+.about-me-container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding-left: 10rem;
+  padding-right: 10rem;
+
+  @include respond(550px) {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+.about-me {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  padding: 10rem 0rem 10rem 0rem;
+  font-family: $font-primary;
+  font-size: 2.2rem;
+  font-weight: 500;
+
+  @include respond(550px) {
+    grid-template-columns: 1fr;
+    font-size: 64%;
+  }
+
+  .profile-picture {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    opacity: 1;
+
+    @include respond(550px) {
+      width: 70%;
+      justify-self: center;
+    }
+  }
+
+  .about-me-text-1 {
+    margin-bottom: 3rem;
+    animation-name: moveUp;
+    animation-duration: 3s;
+    @include respond(800px) {
+      font-size: 80%;
+    }
+
+    @include respond(550px) {
+      font-size: 100%;
+      padding-left: 10rem;
+      padding-right: 10rem;
+    }
+  }
+
+  .about-me-text-2 {
+    margin-bottom: 3rem;
+    animation-name: moveUp;
+    animation-duration: 3s;
+    font-family: "Poiret One";
+    @include respond(800px) {
+      font-size: 80%;
+    }
+
+    @include respond(550px) {
+      font-size: 100%;
+      padding-left: 10rem;
+      padding-right: 10rem;
+    }
+  }
+
+  .about-me-text-3 {
+    animation-name: moveUp;
+    animation-duration: 3s;
+    @include respond(800px) {
+      font-size: 80%;
+    }
+
+    @include respond(550px) {
+      font-size: 100%;
+      padding-left: 10rem;
+      padding-right: 10rem;
+    }
+  }
+
+  p {
+    line-height: 3rem;
+  }
+}

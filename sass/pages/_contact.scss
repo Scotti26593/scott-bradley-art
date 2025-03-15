@@ -1,0 +1,141 @@
+@use "../base/_variables.scss" as *;
+@use "../components/_carousel.scss" as *;
+
+body {
+  font-family: $font-primary;
+}
+
+.contact-container {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+.form-container {
+  margin: 0 auto;
+}
+
+.section-form {
+  position: relative;
+  padding: 10rem 5rem 10rem 5rem;
+  background-color: $color-primary;
+  height: 100%;
+}
+
+.contact-heading {
+  font-size: 4rem;
+  margin-top: 10rem;
+  color: $color-heading;
+  margin-bottom: 2rem;
+  animation-name: moveInLeft;
+  animation-duration: 3s;
+}
+
+.contact-sub-text {
+  color: $color-sub-heading;
+  font-weight: 600;
+  font-size: 2rem;
+  animation-name: moveInLeft;
+  animation-duration: 3s;
+}
+
+.form-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 40%;
+  filter: brightness(80%);
+  z-index: -1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 140, 255, 0);
+    z-index: 1;
+  }
+
+  &__content {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.form {
+  animation-name: moveUpGalleryImages;
+  animation-duration: 1.5s;
+
+  max-width: 120rem;
+  height: 50rem;
+  background-image: linear-gradient(
+      105deg,
+      rgba(255, 255, 255, 0.752) 0%,
+      rgba(255, 255, 255, 0.8) 50%,
+      transparent 50%
+    ),
+    url(../images/river.jpg);
+
+  background-size: cover;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  border-radius: 1rem;
+  box-shadow: 1rem 2rem 2rem rgba(0, 0, 0, 0.307);
+
+  .form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 5rem;
+
+    .input {
+      padding: 1rem;
+      border: none;
+      border-radius: 2px;
+      font-size: 1.5rem;
+      background-color: rgba(255, 255, 255, 0.787);
+    }
+
+    .input:focus {
+      outline: none;
+      box-shadow: 0rem 2rem 2rem rgba(0, 0, 0, 0.307);
+    }
+
+    &__name {
+      width: 30rem;
+    }
+
+    &__email {
+      width: 30rem;
+    }
+
+    &__message {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+
+      ::placeholder {
+        padding: 0.5rem;
+      }
+    }
+
+    .form-btn {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.5rem;
+      background-color: rgba(255, 255, 255, 0.787);
+      color: grey;
+    }
+
+    :hover .form-btn {
+      cursor: pointer;
+      background-color: $color-primary2;
+      color: black;
+    }
+  }
+}

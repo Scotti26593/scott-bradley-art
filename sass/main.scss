@@ -1,0 +1,62 @@
+//BASE
+@use "base/variables" as *;
+@use "base/typography" as *;
+@use "base/animations" as *;
+@use "base/base" as *;
+@use "base/mixins" as *;
+
+//PAGES
+@use "pages/home" as *;
+@use "pages/about-me" as *;
+@use "pages/photography" as *;
+@use "pages/gallery" as *;
+@use "pages/contact" as *;
+
+//COMPONENTS
+@use "components/buttons" as *;
+@use "components/carousel" as *;
+
+//LAYOUTS
+@use "layouts/layouts" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(1200px) {
+    font-size: 50%;
+  }
+  @include respond(1000px) {
+    font-size: 40%;
+  }
+
+  @include respond(700px) {
+    font-size: 30%;
+  }
+  @include respond(500px) {
+    font-size: 25%;
+  }
+  @include respond(500px) {
+    font-size: 23%;
+  }
+}
+
+body {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+h1 {
+  letter-spacing: 1rem;
+}

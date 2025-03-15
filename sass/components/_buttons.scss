@@ -1,0 +1,88 @@
+// MAIN MENU BUTTON
+@use "../base/_variables.scss" as *;
+
+@use "../base/_animations.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+.menu-button {
+  opacity: 1;
+
+  background-color: $color-primary2-faded;
+
+  width: 22rem;
+  font-size: 2.5rem;
+  color: black;
+  border: none;
+  font-family: $font-primary;
+  font-weight: 600;
+
+  justify-content: center;
+  justify-items: center;
+  letter-spacing: 8px;
+  text-decoration: none;
+  justify-self: center;
+  text-align: center;
+  align-self: center;
+  align-items: center;
+  border-radius: 10px;
+  animation-name: moveUp;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  transition: ease-in;
+  position: relative;
+  padding: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+//MOBILE BUTTON NAV//
+//MOBILE BUTTON NAV//
+//MOBILE BUTTON NAV//
+//MOBILE BUTTON NAV//
+//MOBILE BUTTON NAV//
+//MOBILE BUTTON NAV//
+
+.mobile-nav-button {
+  color: gray;
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  right: 5%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 2rem 1rem 2rem;
+  font-size: 3rem;
+  background-color: rgb(177, 190, 177);
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.179) 1rem 1rem 2rem 0rem;
+  border-radius: 10px;
+  opacity: 0;
+
+  @include respond(800px) {
+    opacity: 1;
+  }
+}
+
+.mobile-nav-close-button {
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 2rem 1rem 2rem;
+  font-size: 3rem;
+  background-color: $color-primary;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.179) 1rem 1rem 2rem 0rem;
+  border-radius: 10px;
+  opacity: 1;
+
+  color: gray;
+
+  @include respond(800px) {
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,38 @@
+@use "../base/_variables.scss" as *;
+@use "../components/_carousel.scss" as *;
+@use "../layouts/layouts" as *;
+@use "../base/_mixins.scss" as *;
+
+.header-container {
+  background-color: $color-primary;
+}
+
+.header {
+  height: 100vh;
+  background-image: linear-gradient(
+      to right,
+      rgb(255, 255, 255),
+      rgba(255, 255, 255, 0.832)
+    ),
+    url(../images/7.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(5% 0%, 85% 0%, 95% 100%, 15% 100%);
+  position: relative;
+}
+
+.heading {
+  display: block;
+  color: rgb(59, 58, 58);
+  font-family: $font-primary, "sans sarif";
+  font-size: 6rem;
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+  animation-name: moveInRight;
+  animation-duration: 4s;
+  transition: ease-in;
+  opacity: 1;
+
+  @include respond(1200px) {
+  }
+}

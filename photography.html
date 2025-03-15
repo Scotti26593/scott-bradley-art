@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/general.css" />
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/9712b547d9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="photography-body">
+    <header>
+      <!--NAVIGATION BAR-->
+      <!--NAVIGATION BAR-->
+      <nav class="navigation-bar">
+        <ul class="navigation-top-list">
+          <li><a class="nav-link" href="index.html">HOME</a></li>
+          <li><a class="nav-link" href="about-me.html">ABOUT ME</a></li>
+          <li><a class="nav-link" href="gallery.html">GALLERY</a></li>
+          <li><a class="nav-link" href="photography.html">PHOTOGRAPHY </a></li>
+
+          <li><a class="nav-link" href="contact.html">CONTANCT</a></li>
+        </ul>
+        <button class="mobile-nav-button">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+
+      <!--SLIDING NAVIGATION-->
+      <!--SLIDING NAVIGATION-->
+
+      <nav class="sliding-navigation">
+        <button class="mobile-nav-close-button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <ul class="navigation-list">
+          <li class="navigation-list-link">
+            <a href="index.html">HOME</a>
+          </li>
+          <li class="navigation-list-link">
+            <a href="about-me.html">ABOUT ME</a>
+          </li>
+          <li class="navigation-list-link">
+            <a href="gallery.html">GALLERY</a>
+          </li>
+          <li class="navigation-list-link">
+            <a href="photography.html">PHOTOGRAPHY</a>
+          </li>
+          <li class="navigation-list-link">
+            <a href="contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="photography-section">
+      <div class="photography-container">
+        <h1 class="photograpy-heading">PHOTOGRAPHY</h1>
+
+        <div class="images">
+          <img
+            class="image paris"
+            src="images/paris.jpg"
+            alt=""
+            data-index="2"
+          />
+
+          <img
+            class="image bridge"
+            src="images/bridge.jpg"
+            alt=""
+            data-index="0"
+          />
+
+          <img
+            class="image old-man"
+            src="images/old-man.jpg"
+            alt=""
+            data-index="1"
+          />
+
+          <img
+            class="image paris-museum"
+            src="images/paris-museum.jpg"
+            alt=""
+            data-index="5"
+          />
+
+          <img class="image dom" src="images/dom.jpg" alt="" data-index="6" />
+
+          <img
+            class="image fog-man"
+            src="images/fog-man.jpg"
+            alt=""
+            data-index="3"
+          />
+
+          <img class="image dog" src="images/dog.jpg" alt="" data-index="4" />
+        </div>
+      </div>
+    </section>
+
+    <section class="carousel-container hidden">
+      <div class="carousel" data-carousel>
+        <button
+          class="carousel-button previous"
+          data-carousel-button="previous"
+        >
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button class="carousel-button next" data-carousel-button="next">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+        <button class="close-button"><i class="fa-solid fa-xmark"></i></button>
+
+        <ul class="carousel-slides" data-slides>
+          <li class="slide paris-carousel" data-index="2">
+            <img src="images/paris.jpg" alt="" />
+          </li>
+          <li class="slide bridge-carousel" data-active data-index="0">
+            <img src="images/bridge.jpg" alt="" />
+          </li>
+          <li class="slide old-man-carousel" data-index="1">
+            <img src="images/old-man.jpg" alt="" />
+          </li>
+          <li class="slide paris-museum-carousel" data-index="5">
+            <img src="images/paris-museum.jpg" alt="" />
+          </li>
+
+          <li class="slide dom-carousel" data-index="6">
+            <img src="images/dom.jpg" alt="" />
+          </li>
+
+          <li class="slide fog-man-carousel" data-index="3">
+            <img src="images/fog-man.jpg" alt="" />
+          </li>
+          <li class="slide dog-carousel" data-index="4">
+            <img src="images/dog.jpg" alt="" />
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-contact">
+        <h4 class="footer-contact-heading">CONTACT</h4>
+        <a
+          class="footer-contact_email"
+          href="mailto:scott.bradley93@hotmail.com"
+          >scott.bradley@hotmail.com
+        </a>
+
+        <a class="footer-contact_phone" href="tel:01786263663">01786263663</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
+</html>

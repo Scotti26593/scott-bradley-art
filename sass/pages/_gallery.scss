@@ -1,0 +1,338 @@
+@use "../base/_variables.scss" as *;
+
+@use "../base/_animations.scss" as *;
+@use "../base/_mixins.scss" as *;
+
+.gallery-section {
+  position: relative;
+
+  background-color: $color-primary;
+}
+
+.gallery-heading {
+  margin-top: 10rem;
+  font-size: 6rem;
+  margin-bottom: 5rem;
+  padding-top: 5rem;
+  color: $color-heading;
+  animation-name: moveInLeft;
+  animation-duration: 3s;
+  font-family: $font-primary;
+}
+
+.gallery-container {
+  margin: 0 auto;
+  max-width: 130rem;
+  padding: 0rem 5rem 5rem 5rem;
+}
+
+.paintings {
+  width: 100%;
+  display: grid;
+  justify-self: center;
+  grid-template-columns: repeat(3fr);
+  grid-template-rows: auto;
+
+  gap: 2rem;
+  row-gap: 4rem;
+
+  @include respond(900px) {
+    grid-template-columns: repeat(2, 1fr); // 2 columns at 900px
+
+    // Reset the specific positioning at smaller screens
+
+    .box {
+      p {
+        font-size: 2rem;
+      }
+    }
+
+    .purple-road-div {
+      grid-column: 1 / 3;
+      grid-row: auto;
+    }
+
+    .drachen-fells-div {
+      grid-column: 1 / 3;
+      grid-row: auto;
+    }
+
+    .curvey-tree-div {
+      grid-row: 2;
+      grid-column: 2;
+    }
+  }
+}
+
+.image {
+  max-width: 100%;
+  display: block;
+  align-self: flex-end;
+
+  &_purple-road {
+    grid-row: 2;
+    grid-column: 1 / 2;
+    width: 100%;
+  }
+
+  &_lady {
+    height: 100%;
+    justify-self: center;
+    animation-name: moveUpGalleryImages;
+    animation-duration: 1.5s;
+    width: 100%;
+    height: 95%;
+  }
+
+  &_purple-trees {
+    height: 95%;
+    width: 100%;
+    animation-name: moveUpGalleryImages;
+    animation-duration: 2s;
+  }
+
+  &_exbury {
+    animation-name: moveUpGalleryImages;
+    animation-duration: 1s;
+    height: 95%;
+  }
+
+  &_düsseldorf-park {
+    justify-self: center;
+    height: 94%;
+  }
+
+  &_big-face {
+    justify-self: center;
+    height: 100%;
+  }
+
+  &_drachen-fells {
+    grid-row: 3;
+    grid-column: 2 / 4;
+    width: 100%;
+    height: 97%;
+    align-self: start;
+  }
+
+  &_red-ground {
+    justify-self: center;
+  }
+
+  &_exbury-2 {
+    justify-self: center;
+    height: 94%;
+  }
+
+  &_curvey-tree {
+    height: 95%;
+  }
+
+  &:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
+}
+
+.drachen-fells-div {
+  grid-row: 3;
+  grid-column: 2 / 4;
+  width: 100%;
+  height: 97%;
+  align-self: start;
+}
+
+.purple-road-div {
+  grid-row: 2;
+  grid-column: 1 / 3;
+  width: 100%;
+}
+
+//SKETCHBOOK DRAWINGS //
+//SKETCHBOOK DRAWINGS //
+//SKETCHBOOK DRAWINGS //
+//SKETCHBOOK DRAWINGS //
+//SKETCHBOOK DRAWINGS //
+//SKETCHBOOK DRAWINGS //
+//SKETCHBOOK DRAWINGS //
+//SKETCHBOOK DRAWINGS //
+//SKETCHBOOK DRAWINGS //
+
+.sketches-container {
+  margin: 0 auto;
+  max-width: 130rem;
+  height: 100rem;
+}
+
+.sketch-section {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 5rem 5rem 0rem 5rem;
+  background-color: $color-primary2-faded;
+
+  &_sketch-heading {
+    margin-bottom: 0;
+    color: $color-heading;
+    font-size: 4rem;
+  }
+
+  &_sketch-subheading {
+    color: $color-sub-heading;
+    font-size: 2rem;
+  }
+}
+
+.sketch-container {
+  max-width: 90rem;
+  height: 60rem;
+  margin: 0 auto;
+  position: fixed;
+
+  position: relative;
+
+  .photo {
+    width: 20%;
+    height: auto;
+    transition: all 1s;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.image-1 {
+      position: absolute;
+      top: 10%;
+      left: 30%;
+      transform: rotate(-5deg);
+      z-index: 1;
+      &:hover {
+        transform: rotate(-5deg) scale(1.05);
+      }
+    }
+
+    &.image-2 {
+      position: absolute;
+      top: 55%;
+      left: 40%;
+      z-index: 2;
+      transform: rotate(-20deg);
+      &:hover {
+        transform: rotate(-20deg) scale(1.05);
+      }
+    }
+
+    &.image-3 {
+      position: absolute;
+      top: 25%;
+      left: 35%;
+      z-index: 1;
+      transform: rotate(60deg);
+      &:hover {
+        transform: rotate(60deg) scale(1.05);
+      }
+    }
+
+    &.image-4 {
+      width: 35%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      transform: rotate(30deg);
+      &:hover {
+        transform: rotate(30deg) scale(1.05);
+      }
+    }
+
+    &.image-5 {
+      width: 35%;
+      position: absolute;
+      top: 10%;
+      left: 45%;
+
+      transform: rotate(10deg);
+
+      &:hover {
+        transform: rotate(10deg) scale(1.05);
+      }
+    }
+    &.image-6 {
+      width: 20%;
+      position: absolute;
+      top: 20%;
+      left: 70%;
+      z-index: 1;
+      transform: rotate(-30deg);
+      &:hover {
+        transform: rotate(-30deg) scale(1.05);
+      }
+    }
+    &.image-7 {
+      position: absolute;
+      top: 50%;
+      width: 20%;
+      left: 15%;
+      z-index: 2;
+      transform: rotate(-10deg);
+      &:hover {
+        transform: rotate(-10deg) scale(1.05);
+      }
+    }
+    &.image-8 {
+      width: 25%;
+      position: absolute;
+      left: 5%;
+      top: 15%;
+      z-index: 1;
+
+      transform: rotate(-20deg);
+      &:hover {
+        transform: rotate(-20deg) scale(1.05);
+      }
+    }
+
+    &.image-9 {
+      width: 25%;
+      position: absolute;
+      left: -10%;
+      top: 40%;
+      z-index: 1;
+      @include respond(800px) {
+        left: 40%;
+        top: 85%;
+      }
+
+      transform: rotate(-20deg);
+      &:hover {
+        transform: rotate(-20deg) scale(1.05);
+      }
+    }
+
+    &.image-10 {
+      width: 35%;
+      position: absolute;
+      left: 5%;
+      top: 75%;
+      z-index: 1;
+
+      transform: rotate(-20deg);
+      &:hover {
+        transform: rotate(-20deg) scale(1.05);
+      }
+    }
+  }
+}
+
+.sketch-container .photo.no-rotate {
+  transform: rotate(0deg) !important;
+}
+
+.sketch-container .photo.pop {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1.9) !important;
+
+  z-index: 100;
+  transition: all 1s;
+}

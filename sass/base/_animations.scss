@@ -1,0 +1,155 @@
+@use "_variables.scss" as *;
+/*MOVE IN RIGHT AND LEFT ANIMATION */
+/*MOVE IN RIGHT AND LEFT ANIMATION */
+/*MOVE IN RIGHT AND LEFT ANIMATION */
+/*MOVE IN RIGHT AND LEFT ANIMATION */
+/*MOVE IN RIGHT AND LEFT ANIMATION */
+/*MOVE IN RIGHT AND LEFT ANIMATION */
+/*MOVE IN RIGHT AND LEFT ANIMATION */
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-450px);
+  }
+  50% {
+    transform: translateX(100px);
+    transform: scale(100%);
+  }
+  /*75% {
+    transform: translateX(-50px);
+  }
+
+  90% {
+    transform: translateX(25px);
+  }
+  95% {
+    transform: translateX(-10px);
+  }*/
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(850px);
+  }
+  50% {
+    transform: translateX(-100px);
+    transform: scale(150%);
+  }
+  /*75% {
+    transform: translateX(50px);
+  }
+
+  90% {
+    transform: translateX(-25px);
+  }
+  95% {
+    transform: translateX(10px);
+  }*/
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight1 {
+  0% {
+    opacity: 0;
+    transform: translateX(850px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(250px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveUpGalleryImages {
+  0% {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* BUTTON RIPPLE EFFECT*/
+/* BUTTON RIPPLE EFFECT*/
+/* BUTTON RIPPLE EFFECT*/
+/* BUTTON RIPPLE EFFECT*/
+/* BUTTON RIPPLE EFFECT*/
+/* BUTTON RIPPLE EFFECT*/
+/* BUTTON RIPPLE EFFECT*/
+/* BUTTON RIPPLE EFFECT*/
+
+.menu-button::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 1.5s;
+
+  background-color: $color-primary2-faded;
+}
+
+.menu-button:hover::after {
+  transform: scale(250%);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.menu-animation {
+  animation: moveUp 4s ease-out 4s;
+  animation-duration: 1.5s;
+  animation-fill-mode: backwards;
+}
+
+.menu-animation .hidden {
+  opacity: 0;
+}
+
+.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+.hidden {
+  opacity: 0 !important;
+  z-index: -1;
+}
+
+.open {
+  opacity: 1;
+}
