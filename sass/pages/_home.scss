@@ -32,7 +32,4 @@
   animation-duration: 4s;
   transition: ease-in;
   opacity: 1;
-
-  @include respond(1200px) {
-  }
 }

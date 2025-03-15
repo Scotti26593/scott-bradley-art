@@ -297,10 +297,6 @@
       left: -10%;
       top: 40%;
       z-index: 1;
-      @include respond(800px) {
-        left: 40%;
-        top: 85%;
-      }
 
       transform: rotate(-20deg);
       &:hover {
