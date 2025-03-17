@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 15;
 
   .navigation-top-list {
     margin: 0 auto;
@@ -19,11 +19,10 @@
     gap: 12rem;
     padding: 4rem;
 
-    padding-left: 2.4rem;
     font-size: 2rem;
     font-weight: 600;
     list-style: none;
-    padding-right: 4rem;
+
     letter-spacing: 4px;
 
     .nav-link {
@@ -40,6 +39,7 @@
       font-size: 2rem;
     }
     @include respond(800px) {
+      padding: 4rem;
     }
   }
 }
@@ -64,8 +64,8 @@
 
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 2s ease-out;
-  transition: all 2s ease-out;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
 }

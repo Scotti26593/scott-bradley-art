@@ -12,26 +12,29 @@
 .gallery-heading {
   margin-top: 10rem;
   font-size: 6rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   padding-top: 5rem;
   color: $color-heading;
   animation-name: moveInLeft;
   animation-duration: 3s;
   font-family: $font-primary;
+  @include respond(800px) {
+    padding-top: 10rem;
+  }
 }
 
 .gallery-container {
   margin: 0 auto;
   max-width: 130rem;
   padding: 0rem 5rem 5rem 5rem;
+  min-height: 100dvb;
 }
 
 .paintings {
   width: 100%;
   display: grid;
   justify-self: center;
-  grid-template-columns: repeat(3fr);
-  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 2rem;
   row-gap: 4rem;
@@ -68,6 +71,8 @@
   max-width: 100%;
   display: block;
   align-self: flex-end;
+  object-fit: cover;
+  height: auto;
 
   &_purple-road {
     grid-row: 2;
@@ -163,7 +168,6 @@
   max-width: 130rem;
   height: 100rem;
 }
-
 .sketch-section {
   margin: 0 auto;
   max-width: 100%;
@@ -186,7 +190,6 @@
   max-width: 90rem;
   height: 60rem;
   margin: 0 auto;
-  position: fixed;
 
   position: relative;
 
@@ -203,9 +206,11 @@
       position: absolute;
       top: 10%;
       left: 30%;
+      -webkit-transform: rotate(-5deg);
       transform: rotate(-5deg);
       z-index: 1;
       &:hover {
+        -webkit-transform: rotate(-5deg) scale(1.05);
         transform: rotate(-5deg) scale(1.05);
       }
     }
@@ -215,8 +220,10 @@
       top: 55%;
       left: 40%;
       z-index: 2;
+      -webkit-transform: rotate(-20deg);
       transform: rotate(-20deg);
       &:hover {
+        -webkit-transform: rotate(-20deg) scale(1.05);
         transform: rotate(-20deg) scale(1.05);
       }
     }
@@ -228,6 +235,7 @@
       z-index: 1;
       transform: rotate(60deg);
       &:hover {
+        -webkit-transform: rotate(60deg) scale(1.05);
         transform: rotate(60deg) scale(1.05);
       }
     }
@@ -238,8 +246,10 @@
       top: 50%;
       left: 50%;
       z-index: 1;
+      -webkit-transform: rotate(30deg);
       transform: rotate(30deg);
       &:hover {
+        -webkit-transform: rotate(30deg) scale(1.05);
         transform: rotate(30deg) scale(1.05);
       }
     }
@@ -250,9 +260,11 @@
       top: 10%;
       left: 45%;
 
+      -webkit-transform: rotate(10deg);
       transform: rotate(10deg);
 
       &:hover {
+        -webkit-transform: rotate(10deg) scale(1.05);
         transform: rotate(10deg) scale(1.05);
       }
     }
@@ -262,9 +274,15 @@
       top: 20%;
       left: 70%;
       z-index: 1;
+      -webkit-transform: rotate(-30deg);
       transform: rotate(-30deg);
       &:hover {
+        -webkit-transform: rotate(-30deg) scale(1.05);
         transform: rotate(-30deg) scale(1.05);
+      }
+      @include respond(800px) {
+        left: 55%;
+        top: 90%;
       }
     }
     &.image-7 {
@@ -273,8 +291,10 @@
       width: 20%;
       left: 15%;
       z-index: 2;
+      -webkit-transform: rotate(-10deg);
       transform: rotate(-10deg);
       &:hover {
+        -webkit-transform: rotate(-10deg) scale(1.05);
         transform: rotate(-10deg) scale(1.05);
       }
     }
@@ -285,8 +305,10 @@
       top: 15%;
       z-index: 1;
 
+      -webkit-transform: rotate(-20deg);
       transform: rotate(-20deg);
       &:hover {
+        -webkit-transform: rotate(-20deg) scale(1.05);
         transform: rotate(-20deg) scale(1.05);
       }
     }
@@ -294,13 +316,20 @@
     &.image-9 {
       width: 25%;
       position: absolute;
-      left: -10%;
+      left: 75%;
       top: 40%;
-      z-index: 1;
+      z-index: -1;
 
+      -webkit-transform: rotate(-20deg);
       transform: rotate(-20deg);
       &:hover {
+        -webkit-transform: rotate(-20deg) scale(1.05);
         transform: rotate(-20deg) scale(1.05);
+      }
+
+      @include respond(800px) {
+        left: 30%;
+        top: 90%;
       }
     }
 
@@ -311,8 +340,10 @@
       top: 75%;
       z-index: 1;
 
+      -webkit-transform: rotate(-20deg);
       transform: rotate(-20deg);
       &:hover {
+        -webkit-transform: rotate(-20deg) scale(1.05);
         transform: rotate(-20deg) scale(1.05);
       }
     }
@@ -320,6 +351,7 @@
 }
 
 .sketch-container .photo.no-rotate {
+  -webkit-transform: rotate(0deg) !important;
   transform: rotate(0deg) !important;
 }
 
@@ -327,8 +359,13 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) scale(1.9) !important;
+  -webkit-transform: translate(-50%, -50%) scale(2) !important;
+  transform: translate(-50%, -50%) scale(2) !important;
+  @include respond(800px) {
+    -webkit-transform: translate(-50%, -50%) scale(3) !important;
+    transform: translate(-50%, -50%) scale(3) !important;
+  }
 
-  z-index: 100;
+  z-index: 10;
   transition: all 1s;
 }
