@@ -73,6 +73,7 @@
   align-self: flex-end;
   object-fit: cover;
   height: auto;
+  min-height: 100%;
 
   &_purple-road {
     grid-row: 2;
@@ -81,16 +82,13 @@
   }
 
   &_lady {
-    height: 100%;
     justify-self: center;
     animation-name: moveUpGalleryImages;
     animation-duration: 1.5s;
     width: 100%;
-    height: 95%;
   }
 
   &_purple-trees {
-    height: 95%;
     width: 100%;
     animation-name: moveUpGalleryImages;
     animation-duration: 2s;
@@ -99,28 +97,18 @@
   &_exbury {
     animation-name: moveUpGalleryImages;
     animation-duration: 1s;
-    height: 95%;
   }
 
   &_düsseldorf-park {
     justify-self: center;
-    height: 94%;
 
     @include respond(800px) {
     }
   }
 
-  &_big-face {
-    justify-self: center;
-    height: 100%;
-  }
-
   &_drachen-fells {
     grid-row: 3;
     grid-column: 2 / 4;
-    width: 100%;
-    height: 97%;
-    align-self: start;
   }
 
   &_red-ground {
@@ -129,11 +117,9 @@
 
   &_exbury-2 {
     justify-self: center;
-    height: 94%;
   }
 
   &_curvey-tree {
-    height: 95%;
     @include respond(800px) {
       animation-name: moveUpGalleryImages;
     }
@@ -149,7 +135,7 @@
   grid-row: 3;
   grid-column: 2 / 4;
   width: 100%;
-  height: 97%;
+
   align-self: start;
 }
 
