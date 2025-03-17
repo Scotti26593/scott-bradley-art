@@ -142,6 +142,10 @@
   display: grid;
   grid-template-columns: 1fr;
   text-decoration: none;
+
+  @include respond(800px) {
+    font-size: 2rem;
+  }
 }
 
 .footer-contact {

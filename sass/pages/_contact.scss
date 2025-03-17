@@ -1,6 +1,6 @@
 @use "../base/_variables.scss" as *;
 @use "../components/_carousel.scss" as *;
-
+@use "../base/_mixins.scss" as *;
 body {
   font-family: $font-primary;
 }
@@ -12,6 +12,11 @@ body {
 
 .form-container {
   margin: 0 auto;
+  @include respond(700px) {
+    display: flex;
+
+    justify-content: center;
+  }
 }
 
 .section-form {
@@ -19,6 +24,9 @@ body {
   padding: 10rem 5rem 10rem 5rem;
   background-color: $color-primary;
   height: 100%;
+
+  max-width: 130rem;
+  margin: 0 auto;
 }
 
 .contact-heading {
@@ -130,12 +138,45 @@ body {
       font-size: 1.5rem;
       background-color: rgba(255, 255, 255, 0.787);
       color: grey;
+
+      @include respond(700px) {
+        font-size: 3rem;
+      }
     }
 
     :hover .form-btn {
       cursor: pointer;
       background-color: $color-primary2;
       color: black;
+    }
+  }
+
+  @include respond(700px) {
+    width: 100rem;
+    height: 100rem;
+  }
+
+  @include respond(700px) {
+    background-image: linear-gradient(
+        100deg,
+        rgba(255, 255, 255, 0.752) 0%,
+        rgba(255, 255, 255, 0.8) 70%,
+        transparent 50%
+      ),
+      url(../images/river.jpg);
+  }
+}
+
+.form__group__message {
+  .message__box {
+    @include respond(700px) {
+      height: 55rem; // Smaller height on tablets
+      width: 55rem;
+    }
+
+    @include respond(400px) {
+      height: 55rem; // Smaller height on tablets
+      width: 45rem;
     }
   }
 }
