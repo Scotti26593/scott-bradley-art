@@ -23,6 +23,7 @@
   @include respond(550px) {
     font-size: 100%;
     justify-self: center;
+    display: block;
   }
 
   @include respond(400px) {
