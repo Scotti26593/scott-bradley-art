@@ -124,10 +124,18 @@ body {
     .old-man {
       animation: none;
       grid-row: 1;
+
+      @include respond(800px) {
+        animation-name: moveUpGalleryImages;
+      }
     }
 
     .paris-museum {
       grid-row: 2;
+
+      @include respond(800px) {
+        animation-name: moveUpGalleryImages;
+      }
     }
 
     .fog-man {
