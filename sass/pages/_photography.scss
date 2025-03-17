@@ -88,11 +88,6 @@ body {
     grid-row: 2;
   }
 
-  .fog-man {
-    grid-row: 3;
-    height: 100%;
-  }
-
   .dom {
     grid-column: 3;
     grid-row: 2;
@@ -140,7 +135,6 @@ body {
 
     .fog-man {
       grid-row: auto;
-      height: 100%;
     }
 
     .dom {
