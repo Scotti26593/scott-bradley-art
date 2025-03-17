@@ -24,6 +24,7 @@
     font-size: 100%;
     justify-self: center;
     display: block;
+    text-align: center;
   }
 
   @include respond(400px) {
