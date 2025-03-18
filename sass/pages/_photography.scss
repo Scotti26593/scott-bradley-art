@@ -18,6 +18,7 @@ body {
 
 .photography-section {
   background-color: $color-primary;
+  max-width: 100%;
 }
 
 .photography-container {
@@ -37,6 +38,13 @@ body {
     animation-name: moveInLeft;
     animation-duration: 3s;
     font-family: $font-primary;
+
+    @include respond(600px) {
+      font-size: 4rem;
+    }
+    @include respond(400px) {
+      font-size: 3rem;
+    }
   }
 }
 

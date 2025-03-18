@@ -37,6 +37,9 @@
 // Individual slides
 .slide {
   position: absolute;
+  width: auto;
+  max-width: 100%;
+
   inset: 0;
   opacity: 0;
   display: flex;
@@ -44,6 +47,7 @@
   justify-content: center;
   align-items: center;
   list-style: none;
+  overflow: hidden;
   -webkit-user-drag: none;
   -webkit-touch-callout: none;
   touch-action: pan-x pan-y;
@@ -70,13 +74,25 @@
   }
 
   img {
-    max-height: 80vh;
-    max-width: 70vw;
+    display: block;
+    justify-self: center;
+    align-self: center;
+    max-height: 80%;
+    max-width: 90%;
+
+    width: auto;
     object-fit: contain;
-    object-fit: contain;
+    margin: 0 auto;
+
     -webkit-user-drag: none;
     -webkit-touch-callout: none;
     touch-action: pan-x pan-y pinch-zoom;
+
+    @include respond(800px) {
+      max-height: 70vh;
+      max-width: 65vw; // Almost full width on mobile
+      padding: 0; // Remove padding on mobile
+    }
   }
 }
 
@@ -97,6 +113,9 @@
   padding-left: 30rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
+  @include respond(800px) {
+    padding: 3rem 5rem; // Much less padding
+  }
 }
 
 .carousel-button.previous {
@@ -113,6 +132,12 @@
   transform: translateY(-50%);
   padding: 1rem 2rem 1rem 2rem;
   border-radius: 10px;
+
+  @include respond(800px) {
+    left: 2%; // Closer to edge
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+  }
 }
 .carousel-button.next {
   color: gray;
@@ -128,6 +153,12 @@
   transform: translateY(-50%);
   padding: 1rem 2rem 1rem 2rem;
   border-radius: 10px;
+
+  @include respond(800px) {
+    right: 2%; // Closer to edge
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+  }
 }
 
 .close-button {

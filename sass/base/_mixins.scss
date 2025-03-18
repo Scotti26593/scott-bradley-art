@@ -73,4 +73,9 @@
       @content;
     }
   }
+  @if $breakpoint == 300px {
+    @media (max-width: 300px) {
+      @content;
+    }
+  }
 }

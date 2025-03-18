@@ -32,4 +32,11 @@
   animation-duration: 4s;
   transition: ease-in;
   opacity: 1;
+
+  @include respond(500px) {
+    font-size: 4.7rem;
+  }
+  @include respond(400px) {
+    font-size: 3.4rem;
+  }
 }

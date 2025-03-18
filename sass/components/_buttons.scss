@@ -35,6 +35,13 @@
   &:hover {
     cursor: pointer;
   }
+
+  @include respond(500px) {
+    font-size: 2rem;
+  }
+  @include respond(400px) {
+    font-size: 1.5rem;
+  }
 }
 
 //MOBILE BUTTON NAV//

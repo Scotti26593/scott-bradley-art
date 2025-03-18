@@ -43,12 +43,6 @@ html {
   @include respond(700px) {
     font-size: 30%;
   }
-  @include respond(500px) {
-    font-size: 25%;
-  }
-  @include respond(500px) {
-    font-size: 23%;
-  }
 }
 
 body {
