@@ -173,7 +173,10 @@
 .sketches-container {
   margin: 0 auto;
   max-width: 130rem;
-  min-height: 100dvh; // Changed from fixed height
+  max-height: 100%;
+
+  @include respond(300px) {
+  }
 }
 .sketch-section {
   margin: 0 auto;
@@ -195,7 +198,8 @@
 
 .sketch-container {
   max-width: 100vw;
-  height: 100dvh;
+  height: 60rem;
+
   margin: 0 auto;
 
   position: relative;
@@ -203,9 +207,28 @@
   @include respond(600px) {
     height: 160rem;
   }
+  @include respond(400px) {
+    height: 110rem;
+  }
+  @include respond(350px) {
+    height: 90rem;
+  }
+  @include respond(300px) {
+    height: 80rem;
+  }
+  @include respond(250px) {
+    height: 70rem;
+  }
+  @include respond(200px) {
+    height: 60rem;
+  }
+
+  @include respond(150px) {
+    height: 50rem;
+  }
 
   .photo {
-    width: 20%;
+    width: 12%;
     height: auto;
     transition: all 1s;
 
@@ -219,7 +242,7 @@
 
     &.image-1 {
       position: absolute;
-      top: 10%;
+      top: 5%;
       left: 40%;
       -webkit-transform: rotate(-5deg);
       transform: rotate(-5deg);
@@ -232,7 +255,7 @@
 
     &.image-2 {
       position: absolute;
-      top: 45%;
+      top: 35%;
       left: 40%;
       z-index: 2;
       -webkit-transform: rotate(-20deg);
@@ -245,15 +268,11 @@
         left: 44%;
         top: 45%;
       }
-      @include respond(300px) {
-        left: 44%;
-        top: 40%;
-      }
     }
 
     &.image-3 {
       position: absolute;
-      top: 25%;
+      top: 20%;
       left: 35%;
       z-index: 1;
       transform: rotate(60deg);
@@ -265,9 +284,10 @@
 
     &.image-4 {
       position: absolute;
-      top: 50%;
+      top: 15%;
       left: 55%;
       z-index: 1;
+      width: 18%;
       -webkit-transform: rotate(30deg);
       transform: rotate(30deg);
       &:hover {
@@ -278,18 +298,15 @@
       @include respond(600px) {
         left: 50%;
         top: 40%;
-      }
-
-      @include respond(300px) {
-        left: 50%;
-        top: 35%;
+        width: 36%;
       }
     }
 
     &.image-5 {
       position: absolute;
-      top: 10%;
-      left: 55%;
+      top: 2%;
+      left: 50%;
+      width: 18%;
 
       -webkit-transform: rotate(10deg);
       transform: rotate(10deg);
@@ -301,10 +318,7 @@
       @include respond(600px) {
         left: 15%;
         top: 6%;
-      }
-      @include respond(300px) {
-        left: 15%;
-        top: 10%;
+        width: 36%;
       }
     }
     &.image-6 {
@@ -325,9 +339,9 @@
     }
     &.image-7 {
       position: absolute;
-      top: 45%;
+      top: 25%;
 
-      left: 15%;
+      left: 20%;
       z-index: 2;
       -webkit-transform: rotate(-10deg);
       transform: rotate(-10deg);
@@ -343,8 +357,8 @@
     }
     &.image-8 {
       position: absolute;
-      left: 5%;
-      top: 15%;
+      left: 25%;
+      top: 10%;
       z-index: 1;
 
       -webkit-transform: rotate(-20deg);
@@ -362,8 +376,8 @@
 
     &.image-9 {
       position: absolute;
-      left: 75%;
-      top: 40%;
+      left: 55%;
+      top: 25%;
       z-index: 1;
 
       -webkit-transform: rotate(-20deg);
@@ -377,17 +391,14 @@
         left: 30%;
         top: 70%;
       }
-      @include respond(300px) {
-        left: 30%;
-        top: 60%;
-      }
     }
 
     &.image-10 {
       position: absolute;
-      left: 25%;
-      top: 75%;
+      left: 55%;
+      top: 40%;
       z-index: 1;
+      width: 18%;
 
       -webkit-transform: rotate(-20deg);
       transform: rotate(-20deg);
@@ -398,11 +409,32 @@
       @include respond(600px) {
         left: 25%;
         top: 62%;
+        width: 36%;
       }
+    }
 
-      @include respond(300px) {
-        left: 25%;
-        top: 55%;
+    @include respond(400px) {
+      &.image-2 {
+        top: 40%;
+        left: 50%;
+      }
+      &.image-6 {
+        top: 50%;
+        left: 45%;
+      }
+      &.image-7 {
+        top: 30%;
+      }
+      &.image-4 {
+        top: 33%;
+      }
+      &.image-10 {
+        top: 50%;
+        left: 10%;
+      }
+      &.image-9 {
+        top: 57%;
+        left: 20%;
       }
     }
   }
