@@ -164,4 +164,8 @@
     text-decoration: none;
     color: rgb(51, 48, 48);
   }
+
+  @include respond(200px) {
+    font-size: 1.2rem;
+  }
 }

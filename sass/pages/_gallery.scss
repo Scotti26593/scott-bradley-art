@@ -25,6 +25,10 @@
   @include respond(600px) {
     font-size: 4rem;
   }
+
+  @include respond(200px) {
+    font-size: 2.2rem;
+  }
 }
 
 .gallery-container {
@@ -188,11 +192,21 @@
     margin-bottom: 0;
     color: $color-heading;
     font-size: 4rem;
+    @include respond(250px) {
+      font-size: 3rem;
+    }
+    @include respond(200px) {
+      font-size: 2rem;
+    }
   }
 
   &_sketch-subheading {
     color: $color-sub-heading;
     font-size: 2rem;
+
+    @include respond(200px) {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -217,14 +231,17 @@
     height: 80rem;
   }
   @include respond(250px) {
-    height: 70rem;
+    height: 60rem;
   }
   @include respond(200px) {
-    height: 60rem;
+    height: 40rem;
   }
 
   @include respond(150px) {
-    height: 50rem;
+    height: 30rem;
+  }
+  @include respond(100px) {
+    height: 20rem;
   }
 
   .photo {
