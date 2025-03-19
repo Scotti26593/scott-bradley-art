@@ -14,8 +14,8 @@ body {
   margin: 0 auto;
   @include respond(700px) {
     display: flex;
-
     justify-content: center;
+    height: auto;
   }
 }
 
@@ -36,6 +36,12 @@ body {
   margin-bottom: 2rem;
   animation-name: moveInLeft;
   animation-duration: 3s;
+  @include respond(500px) {
+    font-size: 3rem;
+  }
+  @include respond(300px) {
+    font-size: 2.5rem;
+  }
 }
 
 .contact-sub-text {
@@ -44,6 +50,9 @@ body {
   font-size: 3rem;
   animation-name: moveInLeft;
   animation-duration: 3s;
+  @include respond(300px) {
+    font-size: 2rem;
+  }
 }
 
 .form-video {
@@ -91,7 +100,7 @@ body {
 
   background-size: cover;
   margin-top: 10rem;
-  margin-bottom: 10rem;
+
   border-radius: 1rem;
   box-shadow: 1rem 2rem 2rem rgba(0, 0, 0, 0.307);
 
@@ -99,7 +108,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    padding: 5rem;
+    padding: 4rem 2rem 4rem 2rem;
+    margin: 0 auto;
 
     .input {
       padding: 1rem;
@@ -117,8 +127,8 @@ body {
     &__name {
       width: 30rem;
       @include respond(700px) {
-        width: 100%; // Full width on mobile
-        max-width: 30rem;
+        width: 60%; // Full width on mobile
+
         height: 5rem;
         &::placeholder {
           padding: 0.5rem;
@@ -129,9 +139,10 @@ body {
 
     &__email {
       width: 30rem;
+
       @include respond(700px) {
-        width: 100%; // Full width on mobile
-        max-width: 30rem;
+        width: 60%; // Full width on mobile
+
         height: 5rem;
         &::placeholder {
           padding: 0.5rem;
@@ -144,6 +155,7 @@ body {
       display: flex;
       flex-direction: column;
       width: 40%;
+      overflow: hidden;
 
       @include respond(700px) {
         width: 100%; // Full width on mobile
