@@ -25,10 +25,6 @@
   @include respond(600px) {
     font-size: 4rem;
   }
-
-  @include respond(200px) {
-    font-size: 2.2rem;
-  }
 }
 
 .gallery-container {
@@ -203,10 +199,6 @@
   &_sketch-subheading {
     color: $color-sub-heading;
     font-size: 2rem;
-
-    @include respond(200px) {
-      font-size: 1.2rem;
-    }
   }
 }
 
@@ -219,29 +211,29 @@
   position: relative;
 
   @include respond(600px) {
-    height: 160rem;
+    height: 120rem;
   }
   @include respond(400px) {
-    height: 110rem;
-  }
-  @include respond(350px) {
-    height: 90rem;
-  }
-  @include respond(300px) {
     height: 80rem;
   }
-  @include respond(250px) {
+  @include respond(350px) {
+    height: 70rem;
+  }
+  @include respond(300px) {
     height: 60rem;
   }
-  @include respond(200px) {
+  @include respond(250px) {
     height: 40rem;
+  }
+  @include respond(200px) {
+    height: 30rem;
   }
 
   @include respond(150px) {
-    height: 30rem;
+    height: 20rem;
   }
   @include respond(100px) {
-    height: 20rem;
+    height: 15rem;
   }
 
   .photo {
@@ -297,6 +289,10 @@
         -webkit-transform: rotate(60deg) scale(1.05);
         transform: rotate(60deg) scale(1.05);
       }
+      @include respond(600px) {
+        left: 50%;
+        top: 20%;
+      }
     }
 
     &.image-4 {
@@ -313,7 +309,7 @@
       }
 
       @include respond(600px) {
-        left: 50%;
+        left: 55%;
         top: 40%;
         width: 36%;
       }
@@ -350,8 +346,8 @@
         transform: rotate(-30deg) scale(1.05);
       }
       @include respond(600px) {
-        left: 55%;
-        top: 60%;
+        left: 65%;
+        top: 55%;
       }
     }
     &.image-7 {
@@ -368,7 +364,7 @@
       }
 
       @include respond(600px) {
-        left: 25%;
+        left: 15%;
         top: 40%;
       }
     }
@@ -405,8 +401,8 @@
       }
 
       @include respond(600px) {
-        left: 30%;
-        top: 70%;
+        left: 10%;
+        top: 60%;
       }
     }
 
@@ -463,7 +459,8 @@
 }
 
 .sketch-container .photo.pop {
-  position: absolute;
+  position: fixed;
+
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%) scale(2) !important;
@@ -474,5 +471,9 @@
   @include respond(800px) {
     -webkit-transform: translate(-50%, -50%) scale(3) !important;
     transform: translate(-50%, -50%) scale(3) !important;
+  }
+  @include respond(600px) {
+    -webkit-transform: translate(-50%, -50%) scale(2) !important;
+    transform: translate(-50%, -50%) scale(2) !important;
   }
 }
