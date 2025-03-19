@@ -67,6 +67,8 @@ body {
       opacity: 70%;
       cursor: pointer;
     }
+    animation-name: moveUpGalleryImages;
+    animation-duration: 2s;
   }
 
   .dog {
@@ -79,16 +81,29 @@ body {
     grid-column: 1;
     animation-name: moveUpGalleryImages;
     animation-duration: 1s;
+    @include respond(900px) {
+      animation-name: moveUpGalleryImages;
+      animation-duration: 1.5s !important;
+    }
   }
 
   .bridge {
     animation-name: moveUpGalleryImages;
     animation-duration: 1.5s;
+    @include respond(900px) {
+      animation-name: moveUpGalleryImages;
+      animation-duration: 2s !important;
+    }
   }
 
   .old-man {
     animation-name: moveUpGalleryImages;
     animation-duration: 2s;
+
+    @include respond(900px) {
+      animation-name: moveUpGalleryImages;
+      animation-duration: 1s !important;
+    }
   }
 
   .paris-museum {

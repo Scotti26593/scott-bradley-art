@@ -73,8 +73,18 @@
       @content;
     }
   }
+  @if $breakpoint == 350px {
+    @media (max-width: 350px) {
+      @content;
+    }
+  }
   @if $breakpoint == 300px {
     @media (max-width: 300px) {
+      @content;
+    }
+  }
+  @if $breakpoint == 250px {
+    @media (max-width: 250px) {
       @content;
     }
   }

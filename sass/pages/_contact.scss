@@ -50,6 +50,7 @@ body {
   font-size: 3rem;
   animation-name: moveInLeft;
   animation-duration: 3s;
+  letter-spacing: 0.5rem;
   @include respond(300px) {
     font-size: 2rem;
   }
@@ -145,9 +146,15 @@ body {
 
         height: 5rem;
         &::placeholder {
-          padding: 0.5rem;
+          padding: 1rem;
           font-size: 3rem;
         }
+      }
+    }
+
+    .input {
+      @include respond(700px) {
+        font-size: 3rem; // This will affect all inputs and textarea
       }
     }
 
@@ -159,8 +166,9 @@ body {
 
       @include respond(700px) {
         width: 100%; // Full width on mobile
+        font-size: 3rem;
         ::placeholder {
-          padding: 0.5rem;
+          padding: 1.5rem;
           font-size: 3rem;
         }
       }
@@ -203,6 +211,7 @@ body {
 
 .form__group__message {
   .message__box {
+    font-size: 3rem;
     @include respond(700px) {
       height: 55rem; // Smaller height on tablets
       width: 100%;

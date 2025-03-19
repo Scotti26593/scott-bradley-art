@@ -3,6 +3,9 @@
 @use "../layouts/layouts" as *;
 @use "../base/_mixins.scss" as *;
 
+.home-section {
+}
+
 .header-container {
   background-color: $color-primary;
 }
@@ -19,6 +22,16 @@
   background-position: top;
   clip-path: polygon(5% 0%, 85% 0%, 95% 100%, 15% 100%);
   position: relative;
+
+  @include respond(500px) {
+    clip-path: none;
+  }
+}
+
+.title-menu-container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .heading {
@@ -27,16 +40,22 @@
   font-family: $font-primary, "sans sarif";
   font-size: 6rem;
   letter-spacing: 4px;
-  margin-bottom: 1rem;
+
   animation-name: moveInRight;
   animation-duration: 4s;
   transition: ease-in;
   opacity: 1;
 
-  @include respond(500px) {
-    font-size: 4.7rem;
+  &_TWO {
+    margin-bottom: 3rem;
   }
-  @include respond(400px) {
-    font-size: 3.4rem;
+  @include respond(500px) {
+    font-size: 8rem;
+  }
+  @include respond(350px) {
+    font-size: 6rem;
+  }
+  @include respond(250px) {
+    font-size: 4rem;
   }
 }
