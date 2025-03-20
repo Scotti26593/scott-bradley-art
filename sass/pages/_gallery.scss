@@ -173,7 +173,6 @@
 .sketches-container {
   margin: 0 auto;
   max-width: 130rem;
-  max-height: 100%;
 
   @include respond(300px) {
   }
@@ -204,41 +203,50 @@
 
 .sketch-container {
   max-width: 100vw;
-  height: 60rem;
-
+  height: 40dvh;
+  min-height: 100%;
   margin: 0 auto;
 
   position: relative;
 
+  @include respond(800px) {
+    height: 25dvh;
+  }
   @include respond(600px) {
-    height: 120rem;
+    height: 80dvh;
+  }
+  @include respond(500px) {
+    height: 70dvh;
   }
   @include respond(400px) {
-    height: 80rem;
+    height: 50dvh;
   }
   @include respond(350px) {
-    height: 70rem;
+    height: 40dvh;
   }
   @include respond(300px) {
-    height: 60rem;
+    height: 30dvh;
   }
   @include respond(250px) {
-    height: 40rem;
+    height: 25dvh;
   }
   @include respond(200px) {
-    height: 30rem;
+    height: 20dvh;
   }
 
   @include respond(150px) {
-    height: 20rem;
+    height: 15dvh;
   }
   @include respond(100px) {
-    height: 15rem;
+    height: 10dvh;
+  }
+  @include respond(70px) {
+    height: 8rem;
   }
 
   .photo {
     width: 12%;
-    height: auto;
+
     transition: all 1s;
 
     @include respond(600px) {

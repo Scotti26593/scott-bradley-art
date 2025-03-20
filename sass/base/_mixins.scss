@@ -103,4 +103,9 @@
       @content;
     }
   }
+  @if $breakpoint == 70px {
+    @media (max-width: 70px) {
+      @content;
+    }
+  }
 }
