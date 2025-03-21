@@ -38,9 +38,6 @@
     @include respond(1300px) {
       font-size: 2rem;
     }
-    @include respond(800px) {
-      padding: 2rem;
-    }
   }
 }
 
