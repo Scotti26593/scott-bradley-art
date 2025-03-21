@@ -12,10 +12,6 @@
   z-index: 10;
 }
 
-body {
-  background-color: $color-primary;
-}
-
 .photography-section {
   background-color: $color-primary;
   max-width: 100%;
@@ -30,9 +26,9 @@ body {
   max-width: 130rem;
 
   .photograpy-heading {
-    margin-bottom: 7rem;
-    margin-top: 10rem;
-    padding-top: 5rem;
+    margin-bottom: 3rem;
+    margin-top: 15rem;
+
     color: $color-heading;
     font-size: 6rem;
     animation-name: moveInLeft;
