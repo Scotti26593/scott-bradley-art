@@ -39,6 +39,10 @@
       font-size: 2rem;
     }
   }
+  animation-name: moveDown;
+  animation-duration: 0.5s;
+  animation-delay: 0s;
+  animation-fill-mode: backwards;
 }
 
 // SLIDING NAVIGATION
