@@ -34,15 +34,15 @@
         opacity: 0;
       }
     }
-
-    @include respond(1300px) {
-      font-size: 2rem;
-    }
   }
   animation-name: moveDown;
   animation-duration: 0.5s;
-  animation-delay: 0s;
+
   animation-fill-mode: backwards;
+
+  @include respond(1300px) {
+    font-size: 2rem;
+  }
 }
 
 // SLIDING NAVIGATION
