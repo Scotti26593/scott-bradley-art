@@ -8,6 +8,7 @@
   max-width: 100%;
 
   background-color: $color-primary;
+  touch-action: pan-x pan-y pinch-zoom;
 }
 
 .gallery-heading {
@@ -29,6 +30,7 @@
   margin: 0 auto;
   max-width: 130rem;
   padding: 5rem 5rem 5rem 5rem;
+  touch-action: pan-x pan-y pinch-zoom;
 }
 
 .paintings {
@@ -36,6 +38,7 @@
   display: grid;
   justify-self: center;
   grid-template-columns: repeat(3, 1fr);
+  touch-action: pan-x pan-y pinch-zoom;
 
   gap: 2rem;
   row-gap: 4rem;
@@ -47,6 +50,7 @@
     object-fit: cover;
     height: auto;
     min-height: 100%;
+    touch-action: pan-x pan-y pinch-zoom;
 
     &:hover {
       opacity: 70%;
@@ -57,6 +61,7 @@
   .box {
     animation-name: moveUpGalleryImages;
     animation-duration: 2s;
+    touch-action: pan-x pan-y pinch-zoom;
 
     &_lady-box {
       animation-name: moveUpGalleryImages;
