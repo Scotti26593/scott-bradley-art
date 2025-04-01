@@ -50,8 +50,9 @@
   overflow: hidden;
   -webkit-user-drag: none;
   -webkit-touch-callout: none;
-  touch-action: pan-x pan-y;
+
   -webkit-transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+  touch-action: pan-x pan-y pinch-zoom;
 
   // When coming from left (for previous button)
   &[data-direction="prev"] {

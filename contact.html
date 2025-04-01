@@ -87,15 +87,31 @@
         </div>
 
         <div class="form-container">
-          <form class="form" name="contact" method="POST" netlify>
+          <form
+            class="form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
             <div class="form__group">
+              <input type="hidden" name="form-name" value="contact" />
+
+              <p style="display: none">
+                <label
+                  >dont fill this out if your human: <input name="bot-field" />
+                </label>
+              </p>
+
               <input
+                name="name"
                 type="text"
                 class="form__group__name input"
                 placeholder="NAME"
                 required
               />
               <input
+                name="email"
                 type="email"
                 class="form__group__email input"
                 placeholder="E-MAIL"

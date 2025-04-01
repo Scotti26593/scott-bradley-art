@@ -39,10 +39,6 @@
   animation-duration: 0.5s;
 
   animation-fill-mode: backwards;
-
-  @include respond(1300px) {
-    font-size: 2rem;
-  }
 }
 
 // SLIDING NAVIGATION
@@ -109,6 +105,27 @@
       color: $color-text;
       text-decoration: none;
       font-size: 2rem;
+    }
+
+    @include respond(800px) {
+      background-image: linear-gradient(
+        0deg,
+        transparent 100%,
+        transparent 100%,
+        $color-primary 0%
+      );
+
+      &:hover,
+      &:active {
+        background-position: none;
+        cursor: pointer;
+      }
+
+      a {
+        color: $color-text;
+        text-decoration: none;
+        font-size: 2rem;
+      }
     }
   }
 }
