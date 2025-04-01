@@ -192,5 +192,6 @@
 .close-button:focus,
 .carousel-button:focus {
   outline: none;
-  background-color: $color-primary2-faded;
+  background-color: $color-primary;
+  color: white;
 }
