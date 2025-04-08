@@ -153,17 +153,35 @@
     }
   }
   // Hover and active states
-  &:hover,
-  &:active,
-  &:focus {
+  &:hover {
     color: white;
     background-color: rgba(0, 0, 0, 0.2);
   }
 
-  // Reset state after click if not hovering
-  &:active:not(:hover) {
-    background-color: $color-primary2-faded;
-    color: gray;
+  &:active {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+// Add specific mobile styles
+
+@include respond(800px) {
+  .carousel-button {
+    &:active {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &:active:not(:hover) {
+      color: gray;
+      background-color: $color-primary2-faded;
+    }
+
+    &:focus:not(:active) {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
   }
 }
 
