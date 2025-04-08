@@ -179,8 +179,8 @@
     }
 
     &:focus:not(:active) {
-      color: white;
-      background-color: rgba(0, 0, 0, 0.2);
+      color: gray;
+      background-color: $color-primary2-faded;
     }
   }
 }
