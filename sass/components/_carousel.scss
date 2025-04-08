@@ -119,49 +119,55 @@
   }
 }
 
-.carousel-button.previous {
-  color: gray;
-  background-color: $color-primary2-faded;
-  left: 1rem;
-  position: absolute;
-  z-index: 2;
-
-  border: none;
-  top: 50%;
-  left: 5%;
-  font-size: 3rem;
-  transform: translateY(-50%);
-  padding: 1rem 2rem 1rem 2rem;
-  border-radius: 10px;
-
-  @include respond(800px) {
-    left: 2%; // Closer to edge
-    padding: 0.5rem 1rem;
-    font-size: 2rem;
-  }
-}
-.carousel-button.next {
+.carousel-button {
+  // Base styles for both previous and next
   color: gray;
   background-color: $color-primary2-faded;
   position: absolute;
   z-index: 2;
-
   border: none;
   top: 50%;
-  right: 5%;
   font-size: 3rem;
-
   transform: translateY(-50%);
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 2rem;
   border-radius: 10px;
+  transition: all 0.3s ease;
 
-  @include respond(800px) {
-    right: 2%; // Closer to edge
-    padding: 0.5rem 1rem;
-    font-size: 2rem;
+  // Previous button specific
+  &.previous {
+    left: 5%;
+    @include respond(800px) {
+      left: 2%;
+      padding: 0.5rem 1rem;
+      font-size: 2rem;
+    }
+  }
+
+  // Next button specific
+  &.next {
+    right: 5%;
+    @include respond(800px) {
+      right: 2%;
+      padding: 0.5rem 1rem;
+      font-size: 2rem;
+    }
+  }
+  // Hover and active states
+  &:hover,
+  &:active,
+  &:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  // Reset state after click if not hovering
+  &:active:not(:hover) {
+    background-color: $color-primary2-faded;
+    color: gray;
   }
 }
 
+// Close button styles
 .close-button {
   color: gray;
   background-color: $color-primary2-faded;
@@ -170,19 +176,14 @@
   right: 5%;
   top: 5%;
   font-size: 3rem;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 2rem;
   border: none;
   border-radius: 10px;
-}
+  transition: all 0.3s ease;
 
-.close-button:hover,
-.close-button:active {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.09);
-}
-
-.carousel-button:hover,
-.carousel-button:active {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.2);
+  &:hover,
+  &:active {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.09);
+  }
 }
