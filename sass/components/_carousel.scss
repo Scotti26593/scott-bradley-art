@@ -156,6 +156,7 @@
   &:hover {
     color: white;
     background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
   }
 
   &:active {
@@ -203,5 +204,6 @@
   &:active {
     color: white;
     background-color: rgba(0, 0, 0, 0.09);
+    cursor: pointer;
   }
 }

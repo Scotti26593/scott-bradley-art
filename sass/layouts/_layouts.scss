@@ -105,6 +105,8 @@
       color: $color-text;
       text-decoration: none;
       font-size: 2rem;
+      outline: none; // Remove the blue highlight
+      -webkit-tap-highlight-color: transparent; // Remove tap highlight on mobile
     }
 
     @include respond(800px) {
@@ -115,10 +117,16 @@
         $color-primary 0%
       );
 
-      &:hover,
       &:active {
-        background-position: none;
-        cursor: pointer;
+        a {
+          color: $color-primary;
+        }
+      }
+
+      &:focus:not(:active) {
+        a {
+          color: $color-primary2-faded;
+        }
       }
 
       a {
