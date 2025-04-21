@@ -175,11 +175,12 @@
 .sketch-section {
   margin: 0 auto;
   max-width: 100%;
-  padding: 5rem 5rem 0rem 5rem;
+  padding: 5rem 5rem 10rem 0rem;
   background-color: $color-primary2-faded;
 
   &_sketch-heading {
     margin-bottom: 0;
+    margin-left: 2rem;
     color: $color-heading;
     font-size: 4rem;
     @include respond(250px) {
@@ -193,16 +194,20 @@
   &_sketch-subheading {
     color: $color-sub-heading;
     font-size: 2rem;
+    margin-left: 2rem;
   }
 }
 
 .sketch-container {
   max-width: 100vw;
-  height: 55dvh;
+  height: 70dvh;
   min-height: 100%;
   margin: 0 auto;
 
   position: relative;
+  @include respond(1100px) {
+    height: 30dvh;
+  }
 
   @include respond(800px) {
     height: 25dvh;
