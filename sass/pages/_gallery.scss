@@ -205,8 +205,11 @@
   margin: 0 auto;
 
   position: relative;
-  @include respond(1100px) {
+  @include respond(1200px) {
     height: 30dvh;
+  }
+  @include respond(1100px) {
+    height: 25dvh;
   }
 
   @include respond(800px) {
